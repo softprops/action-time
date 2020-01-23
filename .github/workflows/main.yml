@@ -1,0 +1,16 @@
+name: Main
+
+on:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  tick:
+    steps:
+      - uses: actions/checkout@v2
+      - name: tick
+        run: |
+          echo "the time is $(date)" > README.md
+          git add README.md
+          git commit -m "update time"
+          git push origin master
