@@ -2,7 +2,7 @@ name: Main
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   tick:
